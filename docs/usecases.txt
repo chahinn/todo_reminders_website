@@ -1,0 +1,50 @@
+All UI Mockups in docs/ui_mockups
+
+1. Create user:
+	Actor: User
+	Precondition: None
+ 	Postcondition: USER table is updated with new user information
+	Queries: insert into USER (FirstName, LastName, UserName, Password, PhoneNumber) values (‘Edward’, ‘Morse’, ‘asdf’, ‘passasdf123’, ‘2033445678’)
+
+2. Create list:
+	Actor: User
+	Precondition: User is logged in
+	Postcondition: LIST table is updated with new list information
+	Queries: insert into LIST (ListName, CreationDate) values (‘Shopping List’, ‘2016-09-07 03:16:37’)
+
+3. Add people to list:
+	Actor: User
+	Precondition: User is logged in and list exists
+	Postcondition: SUBSCRIPTION table is updated with new user-list connections
+	Queries: insert into SUBSCRIPTION (UserID, ListID) values (15, 21); (will possibly include feature to add friends, in which case we will need a query to select all friends from a friends table and display in a selection menu)
+
+4. Add a task to a list:
+	Actor: User
+	Precondition: User is logged in and assigned to the specific list
+	Postcondition: TODOITEMS table is updated with a new task
+	Queries: insert into TODOITEMS (ListID, Subject, Description, ReminderDate, CreationDate) values (43673,'Chores List','Go to publix and buy milk and vegetables','2016-11-09 15:30:21','2016-05-19 12:15:05')
+	
+5. Complete task:
+	Actor: User
+	Precondition: User is logged in and assigned to the specific list
+	Postcondition: Remove the task from the TODOITEMS table
+	Queries: delete from TODOITEMS Where DumbKey = arg_task_to_delete;
+	
+6. Delete list:
+	Actor: User
+	Precondition: User is logged in and assigned to the specific list
+	Postcondition: Remove all tasks from the TODOITEMS table with associated list, remove all entries in SUBSCRIPTION table with associated list, remove entry from LIST table
+	Queries:  delete from SUBSCRIPTION where ListID = arg_list_to_delete; delete from TODOITEMS where ListID = arg_list_to_delete; delete from LIST where ListID = arg_list_to_delete;
+
+7. Modify task:
+	Actor: User
+	Precondition: User is logged in and assigned to the specific list
+	Postcondition: Update relevant entry in TODOITEMS table
+	Queries: update TODOITEMS set COL_TO_UPDATE = arg_new_value where DumbKey = arg_entry_to_update
+
+8. Reporting:
+	Actor: Admin
+	Precondition: Admin is logged in
+	Postcondition: Select statistics from tables about topics of interest (perhaps quanitity of lists a user has, reminders by user, date, day of week, etc...)
+	Queries: select count(*) from SUBSCRIPTION where UserID = 1027; (many possibilities which will be determined and implemented later)
+	

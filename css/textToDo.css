@@ -1,0 +1,186 @@
+body { 
+	background-color: #B0E5F7;; 
+	font-family: Helvetica;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+}
+
+/*
+input, textarea {
+	border: 3px solid grey;
+	padding: 5px;
+
+}
+*/
+
+/*
+legend {
+	background-color: grey;
+	color: white;
+}
+*/
+
+/*
+div {
+}
+*/
+
+select {
+	font-family: Helvetica;
+	font-size: 15px;
+	background-color: grey;
+	color: white;
+	padding: 3px;
+}
+
+.tasksList > li {
+    list-style-type: none;
+}
+
+
+fieldset {
+	width: 400px;
+	height: 200px;
+}
+
+
+/*
+button {
+	color: black;
+	background-color: lightgrey;
+}
+*/
+
+#banner {
+    height:60px;
+    width:100%;
+    background-color: #69D2F5;
+    border:0px solid #CCC;
+    z-index: 1;
+    margin:0px auto;
+	top:0px;
+	position: fixed;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 15px;
+}
+
+#leftnav {
+	width:20%;
+    background-color: #B0E5F7;
+    height:100%;
+    box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 15px;
+	margin-top: 60px;
+    
+}
+
+#content {
+	width:80%;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #F0F0F0;
+	height:100%;
+	padding: 15px;
+	margin-top: 60px;
+}
+
+.visible {
+	visibility: visible;
+	display: inline-block;
+}
+
+.invisible {
+	visibility: hidden;
+	display: none;
+}
+
+.west {
+	float: left;
+}
+
+.east {
+	float: right;
+}
+
+#main {
+	font: 0;
+}
+
+#addListFieldset {
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -300px;
+	z-index: 1;*/
+}
+
+#addtodoitemFieldset {
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -300px;
+	z-index: 1;*/
+}
+
+#addpersonFieldset {
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -300px;
+	z-index: 1;*/
+}
+
+#updateItemFieldset {
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: -300px;
+	z-index: 1;*/
+}
+
+#register {
+	margin: 50px;
+	margin-top: 30px;
+}
+
+#signin {
+	margin: 50px;
+	margin-top: 30px;
+}
+
+#admin {
+	margin: 50px;
+	margin-top: 30px;
+}
+
+#redirect {
+	margin: 50px;
+	margin-top: 30px;
+}
+
+#yourlists {
+	height:50%;
+}
+
+#members {
+	height:50%;
+}
+
+
+
